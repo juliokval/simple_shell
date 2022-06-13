@@ -13,6 +13,8 @@
 
 extern char **environ;
 
+char *_getenv(char *global_var);
+char *strdup(char *str);
 int _putchar(char c);
 int _strcmp(char *s1, char *s2);
 int _strlen(const char *str);
