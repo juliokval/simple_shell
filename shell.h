@@ -13,21 +13,25 @@
 
 extern char **environ;
 
-int get_path(char **arguments);
-int getbuiltins(char **arguments, int exit_stat);
-char *append_command(char *dir_path, char *command);
-int _mprint(const char *prompt, unsigned int size);
-void free_mem(char *entry);
-int getcmd_inputs(char *entry, char **arguments);
-int err_stat(int n);
-int p_error(char **arguments, int counter);
-int check_file(char *pathname);
-int execute(char **arguments);
-void free_grid(char **grid, int height);
-char *_getenv(char *global_var);
+int prompt(void);
+char *read(void);
+int checkbuiltins(char **av, char *buffer, int *exitstatus);
+char *_getenv(char *name);
 char *strdup(char *str);
 int _putchar(char c);
 int _strcmp(char *s1, char *s2);
-int _strlen(const char *str);
+int _strlen(char *s);
+int prompt(void);
+char *_fullpathbuffer(char **av, char *PATH, char *copy);
+int _forkprocess(char **av, char *buffer, char *fullpathbuffer);
+int _splitstring(char *str);
+char *_strcat(char *dest, char *src);
+char **tokenize(char *buffer);
+int _splitPATH(char *str);
+int _PATHstrcmp(const char *s1, const char *s2);
+char *_concat(char *tmp, char **av, char *tok);
+int _env(void);
+void _puts(char *str);
+char *_memset(char *s, char b, unsigned int n);
 
 #endif
