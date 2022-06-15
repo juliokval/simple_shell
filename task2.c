@@ -7,8 +7,7 @@
 int main(void)
 {
 	char *fullpathbuffer = NULL, *copy = NULL, *buffer = NULL;
-	char *PATH = NULL;
-	char **av;
+	char *PATH = NULL, **av;
 	int exitstatus = 0;
 
 	signal(SIGINT, SIG_IGN);
