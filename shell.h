@@ -19,6 +19,7 @@ extern char **environ;
 /* Program Flow */
 
 int main(void);
+int main(void);
 int prompt(void);
 char *_read(void);
 char *_fullpathbuffer(char **av, char *PATH, char *copy);
